@@ -1,0 +1,359 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Modified into a Beamer template for Northwestern University,
+% by Daniel Lynch, 2019.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass[aspectratio=169,9pt,xcolor=dvipsnames]{beamer}
+
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+\usetheme[hideothersubsections]{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+%\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+% Define NU color scheme:
+% https://www.mccormick.northwestern.edu/marketing/logos-and-branding/color-usage-guidelines.html
+\definecolor{NUpurple}{RGB}{078,042,132} % Northwestern Purple PMS 268, 0x4e2a84
+\definecolor{purple60}{RGB}{131,110,170} % Purple 60, 0x836eaa
+\definecolor{purple30}{RGB}{182,172,209} % Purple 30, 0xb6acd1
+\definecolor{purple10}{RGB}{228,224,238} % Purple 10, 0xe4e0ee
+\definecolor{purple120}{RGB}{064,031,104} % Purple 120, 0x401f68
+\definecolor{black80}{HTML}{342F2E}     % Rich Black 80
+\definecolor{black80}{HTML}{716C6B}     % Rich Black 50
+\definecolor{black80}{HTML}{BBB8B8}     % Rich Black 20
+\definecolor{black80}{HTML}{D8D6D6}     % Rich Black 10
+
+\setbeamercolor{palette primary}{bg=NUpurple,fg=white}
+\setbeamercolor{palette secondary}{bg=NUpurple,fg=white}
+\setbeamercolor{palette tertiary}{bg=NUpurple,fg=white}
+\setbeamercolor{palette quaternary}{bg=NUpurple,fg=white}
+\setbeamercolor{structure}{fg=NUpurple} % itemize, enumerate, etc
+\setbeamercolor{section in toc}{fg=NUpurple} % TOC sections
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\usepackage{amsmath}
+\usepackage{graphicx} % Allows including images
+\usepackage{multimedia}
+\usepackage{media9}
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+%\usepackage[orientation=landscape,size=custom,width=16,height=9,scale=0.5,debug]{beamerposter}
+\usepackage{caption}
+\captionsetup[figure]{labelformat=empty}% redefines the caption setup of the figures environment in the beamer class.
+\usepackage{textpos}
+\usepackage{tikz}
+\usepackage{pgfpages}
+
+%----------------------------------------------------------------------------------------
+% CUSTOM MACROS
+%----------------------------------------------------------------------------------------
+\newcommand{\etal}{et al. }
+\newcommand{\ie}{i.e., }
+\newcommand{\eg}{e.g., }
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[Presentation]{NU Presentation Template} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+\author[A. Uthor]{List of author names} % Your name
+\institute[NU] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+Northwestern University \\ % Your institution for the title page
+\medskip
+\textit{author@institution.edu} % Your email address
+}
+\date{May 1, 2019} % Date, can be changed to a custom date
+
+\begin{document}
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+%\maketitle
+%\vspace{-2.5cm}
+%\includegraphics[width=\textwidth]{titleslide.eps}
+\end{frame}
+
+\addtobeamertemplate{frametitle}{}{
+\begin{textblock*}{100mm}(.72\textwidth,-0.72cm)
+\includegraphics[width=4cm]{lockup-horizontal-short-white-rgb.eps}
+\end{textblock*}}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+
+\section{Introduction} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+%------------------------------------------------
+\subsection{Background}
+\begin{frame}
+\frametitle{Background}
+
+\begin{itemize}
+\item You can present plain text,
+\item equations, such as $\dot{x} = f\left(x,u\right)$, and
+\item you can cite references like~\cite{Aguilar} and~\cite{Hubicki},
+\item but using BibTeX is harder than with other LaTeX document classes.
+\end{itemize}
+
+%\begin{figure}
+%\includegraphics[width=\textwidth]{\path\to\figure}
+%\end{figure}
+
+\begin{block}{This is a ``block''}
+The block contains information I want to emphasize.
+\end{block}
+\end{frame}
+
+%------------------------------------------------
+
+\subsection{Another subsection in the Introduction section}
+
+\begin{frame}
+\frametitle{The frametitle introducing another subsection}
+
+\begin{columns}[c]
+
+\column{.4\textwidth}
+You can create multiple columns.
+This is one.
+\begin{figure}\label{fig:robot}
+%\includegraphics[width=\linewidth]{}
+\caption{Caption: and you can put figures in columns}
+\end{figure}
+
+\column{.6\textwidth}
+This is another column.
+\begin{block}{Another block}
+\begingroup
+\small
+\begin{equation*}
+f_g = 
+\begin{cases}
+0 & \text{if not in contact,}\\
+-k_g x_f &\text{if in contact and foot is sinking,}\\
+\left[0, -k_g x_f\right] & \text{if in contact and foot is stationary.}
+\end{cases}
+\end{equation*}
+\endgroup
+\end{block}
+
+\begin{block}{Block 3}
+\begingroup
+\small
+\begin{alignat*}{3}
+&\text{Body: } &\ddot{x}_b &= \frac{u}{m_b} - g\text{,}\\
+&\text{Foot:} &\ddot{x}_f &= -\frac{k_g}{m_f}x_f - g - \frac{u}{m_f}\text{,}\\
+&\text{Stroke: } &0 &\leq x_b - x_f \leq s\text{,}\\
+&\text{ICs: } &&\left(x_b,\dot{x}_b,x_f,\dot{x}_f\right)\big\rvert_{t=0} = \left(s,v_0,0,v_0\right)\\
+\end{alignat*}
+\endgroup
+\end{block}
+
+\end{columns}
+\end{frame}
+
+%------------------------------------------------
+
+\subsection{Analytical optimization}
+\begin{frame}
+\frametitle{Analytical approach to force profile optimization}
+
+Soft landing problem $\rightarrow$ optimal control problem, solve with Pontryagin's Maximum Principle~\cite{PMP}.
+
+\begin{columns}[T]
+
+\column{.5\textwidth}
+\begin{itemize}
+\item cost function $J(x,u,t)$, dynamics $\dot{x} = f(x,u)$,
+\item state constraints $h(x) \leq 0$, terminal constraints $\psi(x(T)) = 0$, $T$ is free
+\end{itemize}
+
+\vspace{-0.2cm}
+\begin{block}{Pontryagin's Maximum Principle (PMP), 1956}
+\begingroup
+\small
+Given
+\begin{alignat*}{2}
+%\begin{subequations}
+%\begin{equation*}
+\mathcal{H} &= p^{\top}f(x,u) + \nu^{\top}h(x)\text{,}\\
+%\end{equation*}
+%\begin{equation*}
+\dot{x} &= \frac{\partial \mathcal{H}^{\top}}{\partial p} = f(x,u)\text{,}\\
+%\end{equation*}
+%\begin{equation*}
+\dot{p} &= -\frac{\partial \mathcal{H}^{\top}}{\partial x} = -\frac{\partial f^{\top}}{\partial x} - \frac{\partial h^{\top}}{\partial x}\nu\text{, and}\\
+%\end{equation*}
+%\begin{equation*}
+p(T) &= \frac{\partial J^{\top}}{\partial x}\bigg\rvert_T - \frac{\psi^{\top}}{\partial x}\bigg\rvert_T \lambda\text{,}
+%\end{equation*}
+\end{alignat*}
+\text{the optimal control satisfies}
+\begin{equation*}
+\mathcal{H}\left(u^*\right) = \underset{u_{\textrm{min}} \leq u \leq u_{\textrm{max}}}{\text{min}}\ \mathcal{H}\left(u\right)\text{.}
+\end{equation*}
+%\end{subequations}
+\endgroup
+\end{block}
+
+\column{.5\textwidth}
+\begin{block}{Insights from PMP}
+\begingroup
+\small
+\begin{itemize}
+\item $\mathcal{H}$ linear in $u \rightarrow$ bang-bang control is optimal until foot stops
+\item switching times determined by zeros of switching function: $a + b\cos{\left(\omega \left(T-t\right)\right)} + d\sin{\left(\omega \left(T-t\right)\right)}$, where $\omega = \sqrt{\frac{k_g}{m_f}}$
+\item once foot stops, $u \in \left[-m_f g,-k_g x_f - m_f g\right]$
+\end{itemize}
+\endgroup
+\end{block}
+
+Assume only 1 switching event before foot stops. Result:
+\alert{bang-bang-boundary} control
+
+\begin{equation*}
+u^* =
+\begin{cases}
+u_{\text{max}}, & 0\leq t < t_1\text{,}\\
+u_{\text{min}}, & t_1 \leq t < t_2\text{,}\\
+u_{b},  & t \geq t_2\text{,}
+\end{cases}
+\end{equation*}
+
+\end{columns}
+\end{frame}
+
+%------------------------------------------------------------
+\section{Conclusion}
+\begin{frame}
+\frametitle{Conclusion}
+
+\begin{columns}[c]
+
+\column{.5\textwidth}
+Saw some of the things you can do with the Beamer package
+\begin{block}{Such as}
+    \begin{itemize}
+    \item Blocks
+    \item Equations
+    \item Figures
+    \item Columns
+    \end{itemize}
+\end{block}
+\begin{block}{Lastly}
+    \begin{itemize}
+    \item I hope you find this useful.
+    \item I certainly have.
+    \end{itemize}
+\end{block}
+
+\column{.5\textwidth}
+\begin{figure}
+%\includegraphics[width=0.8\textwidth]{}
+\caption{second-to-last caption}
+\end{figure}
+
+\begin{figure}
+%\includegraphics[width=0.8\textwidth]{}
+\caption{the last caption!}
+\end{figure}
+\end{columns}
+
+\end{frame}
+
+%--------------------------------------------
+\begin{frame}
+\frametitle{References}
+\begin{thebibliography}{99} % Beamer does not support BibTeX so references must be inserted manually as below
+\setbeamertemplate{bibliography item}[article]
+\bibitem{Aguilar}
+    J. J. Aguilar and D. I. Goldman.
+    \newblock {\em Robophysical study of jumping dynamics on granular media}.
+    \newblock Nature Physics 12, 273-283 (2016).
+\setbeamertemplate{bibliography item}[article]
+\bibitem{Hubicki}
+    C. M. Hubicki, J. J. Aguilar, D. I. Goldman and A. D. Ames.
+    \newblock {\em Tractable terrain-aware motion planning on granular media: an impulsive jumping study}.
+    \newblock In 2016 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), pages 3887-3892, Oct 2016.
+
+\setbeamertemplate{bibliography item}[book]
+\bibitem{PMP}
+    L. S. Pontryagin.
+    \newblock {\em The mathematical theory of optimal processes}.
+    \newblock CRC Press, 1987 (originally published in 1956)
+\end{thebibliography}
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+
+\end{document} 
